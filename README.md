@@ -47,3 +47,15 @@ Contribuições são muito bem-vindas! Se você tem sugestões de melhorias ou c
 3. Commit suas alterações (`git commit -m 'Adiciona alguma IncrivelFuncionalidade'`)
 4. Push para a branch (`git push origin feature/IncrivelFuncionalidade`)
 5. Abra um Pull Request
+
+## 📬 Contato
+
+Para colaborações ou perguntas, sinta-se à vontade para me contatar:
+
+- **📧 Email:** [gabriel.cpolitano@gmail.com](mailto:gabriel.cpolitano@gmail.com)
+- **💼 LinkedIn:** [Visite meu perfil](https://www.linkedin.com/in/gabriel-correia-politano-a30335302/)
+- **📱 WhatsApp:** [Mande uma mensagem](https://wa.me/17996490503)
+
+
+## 
+Feito com ❤️ por [Gabriel Politano](https://github.com/gabrielcpolitano)
