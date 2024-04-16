@@ -10,6 +10,7 @@
 - [Captura de Tela](#captura-de-tela)
 - [Executando Localmente](#executando-localmente)
 - [Contribuições](#contribuições)
+- [Contato](#contato)
 
 ## ⭐ Funcionalidades
 
