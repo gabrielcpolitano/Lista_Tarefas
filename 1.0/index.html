@@ -1,0 +1,17 @@
+<!DOCTYPE html> <!-- Declaração do tipo de documento, indica que é um HTML5 -->
+<html lang="en"> <!-- Elemento raiz para um documento HTML com atributo de idioma 'en' para inglês -->
+<head> <!-- Seção de cabeçalho do documento, contém metadados -->
+    <meta charset="UTF-8"> <!-- Define o conjunto de caracteres para UTF-8, suportando a maioria das linguagens escritas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Assegura que a largura da página se ajusta à largura do dispositivo, com uma escala inicial de zoom de 1.0 -->
+    <title>Lista de Tarefas</title> <!-- Título do documento, mostrado na aba do navegador -->
+    <link rel="stylesheet" href="style.css"> <!-- Link para o arquivo de estilos CSS externo -->
+</head>
+<body> <!-- Seção do corpo do documento, contém todo o conteúdo visível -->
+    <div class="app"> <!-- Divisão ou seção da página, designada pela classe 'app' para estilização específica -->
+        <input type="text" id="entradaTarefa" placeholder="Adicione uma nova tarefa"> <!-- Campo de entrada para digitar novas tarefas, com um placeholder como guia -->
+        <button onclick="addTask()" id="busca">Adicionar Tarefa</button> <!-- Botão para adicionar tarefas, com evento onclick para chamar a função JavaScript -->
+        <ul id="listaTarefas"></ul> <!-- Lista não ordenada onde as tarefas serão adicionadas dinamicamente -->
+    </div>
+    <script src="script.js"></script> <!-- Vinculação do arquivo JavaScript que contém a lógica para adicionar tarefas -->
+</body>
+</html>
