@@ -1,0 +1,77 @@
+/* Definindo variáveis de cores e espaçamentos */
+:root {
+    --main-bg-color: #4CAF50; /* Cor principal alterada para verde para diversificar */
+    --hover-bg-color: #45a049; /* Cor de hover para o botão */
+    --text-color: #fff; /* Cor do texto */
+    --padding-standard: 10px; /* Preenchimento padrão */
+    --margin-standard: 10px; /* Margem padrão */
+    --border-radius-standard: 5px; /* Raio da borda padrão */
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif; /* Aspas simples para nome de fonte consistente */
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: #f4f4f4; /* Cor de fundo suave para o corpo */
+}
+
+.app {
+    background: white; /* Fundo branco para a app */
+    padding: 20px; /* Preenchimento em torno do conteúdo interno */
+    box-shadow: 0 0 10px rgba(0,0,0,0.1); /* Sombra sutil para destacar a app */
+    border-radius: var(--border-radius-standard); /* Bordas arredondadas */
+    width: 100%;
+    max-width: 500px; /* Largura máxima para a aplicação */
+}
+
+input[type="text"] {
+    padding: var(--padding-standard);
+    width: calc(100% - 22px); /* Calcula a largura levando em conta o padding */
+    border: 1px solid #ccc; /* Borda sutil */
+    border-radius: var(--border-radius-standard);
+    margin-bottom: var(--margin-standard); /* Margem abaixo do input */
+}
+
+button {
+    padding: var(--padding-standard) 20px;
+    cursor: pointer;
+    color: var(--text-color);
+    background-color: rgba(255, 0, 0, 0.663);
+    border: none;
+    border-radius: var(--border-radius-standard);
+    width: 40%; /* Botão ocupa toda a largura do seu container */
+}
+
+#busca {
+    padding: var(--padding-standard) 20px;
+    cursor: pointer;
+    color: var(--text-color);
+    background-color: var(--main-bg-color);
+    border: none;
+    border-radius: var(--border-radius-standard);
+    width: 100%; /* Botão ocupa toda a largura do seu container */
+}
+
+button:hover {
+    background-color: rgba(190, 0, 0, 0.74);;
+}
+
+ul {
+    list-style-type: none; /* Remove os marcadores da lista */
+    padding: 0;
+}
+
+li {
+    background-color: #eee; /* Cor de fundo para cada item da lista */
+    padding: var(--padding-standard);
+    margin-top: var(--margin-standard); /* Margem no topo para separar itens */
+    border-radius: var(--border-radius-standard); /* Bordas arredondadas para os itens */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
