@@ -3,21 +3,21 @@
 // Função que adiciona uma tarefa à lista
 function addTask() {
     // Acessa o elemento entrada pelo seu ID
-    var entrada = document.getElementById('entradaTarefa');
+    let entrada = document.getElementById('entradaTarefa');
 
     // Obtém o valor atual da entrada, que é a tarefa a ser adicionada
-    var novaTarefa = entrada.value;
+    let novaTarefa = entrada.value;
 
     // Verifica se a entrada não está vazia
     if (novaTarefa !== '') {
         // Cria um novo elemento 'li' para a lista
-        var lista = document.createElement('li');
+        let lista = document.createElement('li');
 
         // Define o texto do 'lista' para ser o texto da nova terefa
         lista.textContent = novaTarefa;
 
         // Cria um botão para deletar a tarefa
-        var botaoDeletar = document.createElement('button');
+        let botaoDeletar = document.createElement('button');
 
         // Define o texto do botão como 'Deletar'
         botaoDeletar.textContent = 'Deletar';
