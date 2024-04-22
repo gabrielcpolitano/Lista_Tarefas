@@ -26,7 +26,7 @@
 
 ## 🖼️ Captura de Tela
 
-![Interface da Lista de Tarefas](https://github.com/gabrielcpolitano/Lista_Tarefas/blob/main/lista_tarefas.png) <!-- Substitua com o link real da imagem -->
+![Interface da Lista de Tarefas](https://github.com/gabrielcpolitano/Lista_Tarefas/blob/main/listaTarefas.png) <!-- Substitua com o link real da imagem -->
 
 ## 🏠 Executando Localmente
 
