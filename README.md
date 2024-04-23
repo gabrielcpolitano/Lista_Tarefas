@@ -24,7 +24,7 @@
 - `CSS`: Estilização da página.
 - `JavaScript`: Funcionalidades interativas para adicionar e remover tarefas.
 
-## 🖼️ Captura de Tela
+## 🖼️ Captura
 
 <img src="https://github.com/gabrielcpolitano/Lista_Tarefas/blob/main/listaTarefas.png" width="300" height="452">
 
