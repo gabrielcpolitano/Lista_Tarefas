@@ -7,7 +7,7 @@
 
 - [Funcionalidades](#funcionalidades)
 - [Tecnologias Utilizadas](#tecnologias-utilizadas)
-- [Captura de Tela](#captura-de-tela)
+- [Interface](#captura-de-tela)
 - [Executando Localmente](#executando-localmente)
 - [Contribuições](#contribuições)
 - [Contato](#contato)
