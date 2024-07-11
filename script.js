@@ -1,43 +1,61 @@
-// script.js
 
-// Função que adiciona uma tarefa à lista
 function addTask() {
-    // Acessa o elemento entrada pelo seu ID
-    let entrada = document.getElementById('entradaTarefa');
+  let entrada = document.getElementById('entradaTarefa');
+  let novaTarefa = entrada.value;
 
-    // Obtém o valor atual da entrada, que é a tarefa a ser adicionada
-    let novaTarefa = entrada.value;
+  if (novaTarefa !== '') {
+      let lista = document.createElement('li');
+      lista.textContent = novaTarefa;
 
-    // Verifica se a entrada não está vazia
-    if (novaTarefa !== '') {
-        // Cria um novo elemento 'li' para a lista
-        let lista = document.createElement('li');
+      let botaoDeletar = document.createElement('button');
+      botaoDeletar.textContent = 'Deletar';
 
-        // Define o texto do 'lista' para ser o texto da nova terefa
-        lista.textContent = novaTarefa;
+      botaoDeletar.onclick = function() {
+          lista.parentNode.removeChild(lista);
+          saveTasks();
+      };
 
-        // Cria um botão para deletar a tarefa
-        let botaoDeletar = document.createElement('button');
+      lista.appendChild(botaoDeletar);
 
-        // Define o texto do botão como 'Deletar'
-        botaoDeletar.textContent = 'Deletar';
+      document.getElementById('listaTarefas').appendChild(lista);
+      saveTasks();
 
-        // Adicionar um evento de clique ao botão, definindo o que acontece quando clicado
-        botaoDeletar.onclick = function() {
-            // Remove o 'li' correspondente ao botão de deletar clicando
-            lista.parentNode.removeChild(lista);
-        };
-
-        // Adiciona o botão de deletar ao item da lista
-        lista.appendChild(botaoDeletar);
-
-        // Adicionar o lista na lista de tarefas no HTML
-        document.getElementById('listaTarefas').appendChild(lista);
-
-        // Limpa o campo de entreda depois que a tarefa é adicionada
-        entrada.value = '';
-    } else {
-        // Exibe um alerta se o campo de entrada estiver vazio
-        alert('Por favor, digite o nome da tarefa.')
-    }
+      entrada.value = '';
+  } else {
+      alert('Por favor, digite o nome da tarefa.')
+  }
 }
+
+// Função que salva as tarefas no localStorage
+function saveTasks() {
+  let tarefas = [];
+  let items = document.querySelectorAll('#listaTarefas li');
+  items.forEach(function(item) {
+      tarefas.push(item.childNodes[0].textContent);
+  });
+  localStorage.setItem('tarefas', JSON.stringify(tarefas));
+}
+
+// Função que carrega as tarefas do localStorage
+function loadTasks() {
+  let tarefas = JSON.parse(localStorage.getItem('tarefas'));
+  if (tarefas) {
+      tarefas.forEach(function(tarefa) {
+          let lista = document.createElement('li');
+          lista.textContent = tarefa;
+
+          let botaoDeletar = document.createElement('button');
+          botaoDeletar.textContent = 'Delete';
+          botaoDeletar.onclick = function() {
+              lista.parentNode.removeChild(lista);
+              saveTasks();
+          };
+
+          lista.appendChild(botaoDeletar);
+          document.getElementById('listaTarefas').appendChild(lista);
+      });
+  }
+}
+
+// Carrega as tarefas quando a página é carregada
+window.onload = loadTasks;
