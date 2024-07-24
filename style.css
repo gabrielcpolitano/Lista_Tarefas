@@ -90,7 +90,7 @@ li {
   justify-content: space-between;
 }
 
-@media (min-width: 1000px) {
+@media (min-width: 1018px) {
   .container {
     flex-direction: row;
     flex-wrap: wrap;
