@@ -7,7 +7,7 @@ function addTask(sectionIndex) {
       lista.textContent = novaTarefa;
 
       let botaoDeletar = document.createElement('button');
-      botaoDeletar.textContent = 'Deletar';
+      botaoDeletar.textContent = 'Concluído';
 
       botaoDeletar.onclick = function() {
           lista.parentNode.removeChild(lista);
