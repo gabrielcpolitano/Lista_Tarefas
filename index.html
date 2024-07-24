@@ -13,10 +13,27 @@
 
 <body>
 
-    <div class="app">
-        <input type="text" id="entradaTarefa" placeholder="Add a new task"> 
-        <button onclick="addTask()" id="busca">Add Task</button> 
-        <ul id="listaTarefas"></ul>
+    <div class="container">
+        <div class="app">
+            <h2>Meta do Dia</h2>
+            <input type="text" id="entradaTarefa0" placeholder="Add a new task"> 
+            <button onclick="addTask(0)" id="busca">Add Task</button> 
+            <ul id="listaTarefas0"></ul>
+        </div>
+
+        <div class="app">
+            <h2>Meta da Semana</h2>
+            <input type="text" id="entradaTarefa1" placeholder="Add a new task"> 
+            <button onclick="addTask(1)" id="busca">Add Task</button> 
+            <ul id="listaTarefas1"></ul>
+        </div>
+
+        <div class="app">
+          <h2>Meta da Mensal</h2>
+            <input type="text" id="entradaTarefa2" placeholder="Add a new task"> 
+            <button onclick="addTask(2)" id="busca">Add Task</button> 
+            <ul id="listaTarefas2"></ul>
+        </div>
     </div>
 
     <script src="script.js"></script> 

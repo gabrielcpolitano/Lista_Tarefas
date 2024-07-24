@@ -1,6 +1,5 @@
-
-function addTask() {
-  let entrada = document.getElementById('entradaTarefa');
+function addTask(sectionIndex) {
+  let entrada = document.getElementById('entradaTarefa' + sectionIndex);
   let novaTarefa = entrada.value;
 
   if (novaTarefa !== '') {
@@ -12,50 +11,54 @@ function addTask() {
 
       botaoDeletar.onclick = function() {
           lista.parentNode.removeChild(lista);
-          saveTasks();
+          saveTasks(sectionIndex);
       };
 
       lista.appendChild(botaoDeletar);
 
-      document.getElementById('listaTarefas').appendChild(lista);
-      saveTasks();
+      document.getElementById('listaTarefas' + sectionIndex).appendChild(lista);
+      saveTasks(sectionIndex);
 
       entrada.value = '';
   } else {
-      alert('Por favor, digite o nome da tarefa.')
+      alert('Por favor, digite o nome da tarefa.');
   }
 }
 
 // Função que salva as tarefas no localStorage
-function saveTasks() {
+function saveTasks(sectionIndex) {
   let tarefas = [];
-  let items = document.querySelectorAll('#listaTarefas li');
+  let items = document.querySelectorAll('#listaTarefas' + sectionIndex + ' li');
   items.forEach(function(item) {
       tarefas.push(item.childNodes[0].textContent);
   });
-  localStorage.setItem('tarefas', JSON.stringify(tarefas));
+  localStorage.setItem('tarefas' + sectionIndex, JSON.stringify(tarefas));
 }
 
 // Função que carrega as tarefas do localStorage
-function loadTasks() {
-  let tarefas = JSON.parse(localStorage.getItem('tarefas'));
+function loadTasks(sectionIndex) {
+  let tarefas = JSON.parse(localStorage.getItem('tarefas' + sectionIndex));
   if (tarefas) {
       tarefas.forEach(function(tarefa) {
           let lista = document.createElement('li');
           lista.textContent = tarefa;
 
           let botaoDeletar = document.createElement('button');
-          botaoDeletar.textContent = 'Delete';
+          botaoDeletar.textContent = 'Deletar';
           botaoDeletar.onclick = function() {
               lista.parentNode.removeChild(lista);
-              saveTasks();
+              saveTasks(sectionIndex);
           };
 
           lista.appendChild(botaoDeletar);
-          document.getElementById('listaTarefas').appendChild(lista);
+          document.getElementById('listaTarefas' + sectionIndex).appendChild(lista);
       });
   }
 }
 
 // Carrega as tarefas quando a página é carregada
-window.onload = loadTasks;
+window.onload = function() {
+  for (let i = 0; i < 3; i++) {
+      loadTasks(i);
+  }
+};
